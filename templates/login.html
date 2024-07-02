@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Recommendation App</title>
+    <link rel="stylesheet" type="text/css" href="../static/substyle.css" />
+    <link rel="icon" href="../static/spotify-xxl.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-container">
+      <a href="../">Home</a>
+      <a href="../about">About</a>
+      <a href="../login">Login</a>
+      <a href="../recommendations">Recommendations</a>
+      <a href="../logout">Logout</a>
+      </div>
+    </div>
+    <h1>Login</h1>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="/login">
+      <label for="client_id">Client ID:</label><br>
+      <input type="text" id="client_id" name="client_id" required><br><br>
+
+      <label for="client_secret">Client Secret:</label><br>
+      <input type="password" id="client_secret" name="client_secret" required><br><br>
+
+      <input type="checkbox" id="remember" name="remember">
+      <label for="remember">Remember me</label><br><br>
+
+      {{ form.csrf_token }} <input type="submit" value="Sign in with Spotify">
+
+    </form>
+  </body>
+</html>
