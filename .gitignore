@@ -1,2 +1,8 @@
 .venv
 .cache
+.vscode
+.idx
+__pycache__
+notes.txt
+requirements.txt
+devserver.sh
