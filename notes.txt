@@ -1,5 +1,0 @@
-TO DO:
-- refine results function
-    - finish remaining result choices 
-        (recent songs, recent artists, recommendations)
-    - add ability to create playlist under each table
